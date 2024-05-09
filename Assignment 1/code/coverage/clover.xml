@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1674372874036" clover="3.2.0">
+  <project timestamp="1674372874036" name="All files">
+    <metrics statements="24" coveredstatements="24" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2" elements="36" coveredelements="36" complexity="0" loc="24" ncloc="24" packages="1" files="1" classes="1"/>
+    <file name="heapsort.js" path="D:\ASU MS IN CS COURSE CONTENT AND ALL\SEMESTERS COURSES CONTENT\SPRING 2023\CSE 565 Software Verification Validation and Testing\ASSIGNMENTS\ASSIGNMENT1\code\heapsort.js">
+      <metrics statements="24" coveredstatements="24" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="10" type="stmt"/>
+      <line num="9" count="10" type="stmt"/>
+      <line num="10" count="28" type="stmt"/>
+      <line num="13" count="10" type="stmt"/>
+      <line num="15" count="52" type="stmt"/>
+      <line num="16" count="52" type="stmt"/>
+      <line num="17" count="52" type="stmt"/>
+      <line num="20" count="52" type="stmt"/>
+      <line num="22" count="10" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="149" type="stmt"/>
+      <line num="33" count="149" type="stmt"/>
+      <line num="34" count="149" type="stmt"/>
+      <line num="37" count="149" type="cond" truecount="4" falsecount="0"/>
+      <line num="38" count="58" type="stmt"/>
+      <line num="41" count="149" type="cond" truecount="4" falsecount="0"/>
+      <line num="42" count="23" type="stmt"/>
+      <line num="45" count="149" type="cond" truecount="2" falsecount="0"/>
+      <line num="46" count="69" type="stmt"/>
+      <line num="47" count="69" type="stmt"/>
+      <line num="48" count="69" type="stmt"/>
+      <line num="51" count="69" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

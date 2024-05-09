@@ -1,0 +1,10 @@
+1.1 - more than 10 characters allowed in the name field
+1.3 - underscore character is allowed as a valid character input in the name field
+2.1 - only for 17 the input is considered as valid but for all other values that 16 and less than 16 - the error message for the age is being displayed. 
+7.1 - the rating input field is accepting a value of 0 which is less than 1. 
+9.1 - user status of "new" given 10% discount instead of no discount
+9.2 - even when the product category is set to unknown - the combination of Returning, Silver, Summer is giving an output of "the discount given is 10%" instead of "No discount given"
+9.4.1 - the discount given for the combination of Spring - Returning - Bronze - Electronics should get a discount of 10% but the output is "the discount given is 5%".
+9.5.1 - the discount given for the combination of Winter - Returning - Gold - Electronics should get a discount of 25% but the output is "the discount given is 20%".
+9.6.1 - the discount given for the combination of Fall - Returning - Silver - Electronics should get a discount of 15% but the output is "the discount given is 10%".
+9.7 - the discount given for the combination of Fall - Returning - Gold - Electronics is "the discount given is 10%" when should have been "No discount given". 

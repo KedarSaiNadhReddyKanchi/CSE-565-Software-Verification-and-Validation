@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Login / Sign Up Form</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <link rel="stylesheet" href="./src/checkbox.css" />
+    <link rel="stylesheet" href="./src/radiobutton.css" />
+    <link rel="stylesheet" href="./src/scrollarea.css" />
+    <link rel="stylesheet" href="./src/slider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" href="src/demo.css" />
+</head>
+
+<body>
+    <div id="Page1" style="display: none">
+        <div class="container">
+            <form class="form" id="login" action="#">
+                <img src="147144.png" alt="Avatar" class="avatar" id="homeimage" />
+                <h1 class="form__title" id="login_page_title">Login</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="userNameorEmail"> Username or Email </label>
+                    </span>
+                    <input type="text" class="form__input" autofocus placeholder="Enter your Username or email"
+                        id="userNameorEmail_input" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="user_password"> Password </label>
+                    </span>
+                    <input type="password" class="form__input" autofocus placeholder="Enter your Password"
+                        id="password_input" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <p id="label_for_user_login_terms_and_conditions">
+                    Please read the Terms and conditions below:
+                </p>
+                <div class="scrollarea" id="login_scroll_area">
+                    TERMS AND CONDITIONS BY SIGNING THIS AGREEMENT. (i) You acknowledge
+                    that you have read and understand the terms and conditions of this
+                    Agreement including those on page 2 of this Agreement; (ii) You agree
+                    that this Agreement is a net agreement that you cannot terminate or
+                    cancel, you have an unconditional obligation to make all payments due
+                    under this Agreement, and you cannot withhold, set off or reduce such
+                    payments for any reason; (iii) You will use the Products only for
+                    business purposes and in compliance with all applicable laws and
+                    regulations; (iv) you acknowledge that if this Agreement is replacing
+                    an existing agreement the new Installment Payment may include the
+                    balance of that existing agreement and result in a greater aggregate
+                    product cost to you; and (v) You agree that by providing a telephone
+                    number to a cellular or other wireless device, you are expressly
+                    consenting to receiving communications from us, our affiliates and
+                    agents (for non-marketing purposes) at that number, including, but not
+                    limited to, prerecorded and artificial voice messages, text messages,
+                    and calls from automated telephone dialing systems; these calls may
+                    incur fees from your cellular provider; and this consent applies to
+                    each such telephone number you provide to us now or in the future
+                </div>
+                <div>
+                    <label class="radio-container" id="radio_label_for_user_login_terms_and_conditions">
+                        I agree to the terms and conditions
+                        <input type="radio" name="radio" id="login_terms_and_conditions" required />
+                        <span class="radio-checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="button" id="button_login">
+                    <a href="#"
+                        onclick="return validateForm('Page3','Page1', 'userNameorEmail_input', 'password_input');">
+                        <input type="submit" value="Login" id="user_login_button" />
+                    </a>
+                </div>
+                <div class="button" id="create">
+                    <p class="form__text" id="label_for_sign_up_on_login_page">
+                        Don't have an account?
+                    </p>
+                    <a href="#" onclick="return show('Page2','Page1');">
+                        <input type="submit" value="Sign Up" id="sign_up_button_on_login_page" />
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="Page2">
+        <div class="container">
+            <form class="form" id="createAccount">
+                <img src="147144.png" alt="Avatar" class="avatar" id="signup_homeimage" />
+                <h1 class="form__title" id="signup_create_account_header">
+                    Create Account
+                </h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="signup_userNameorEmail"> User Name </label>
+                    </span>
+                    <input type="text" id="signupUsername" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Username" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="signup_user_Email_label"> Email </label>
+                    </span>
+                    <input type="text" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Email Address" id="signupUsername_email" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="signup_user_password_label"> Password </label>
+                    </span>
+                    <input type="password" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Password" id="signup_password" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="signup_user_confirm_password_label">
+                            Confirm Password
+                        </label>
+                    </span>
+                    <input type="password" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Confirm password" id="signup_confirm_password" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 25px">
+                        <label id="signup_user_phone_number_label" style="margin-bottom: 2px">
+                            Phone Number
+                        </label>
+                    </span>
+                    <input type="text" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Phone Number" id="signupUser_phonenumber" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div>
+                    <label id="signup_gender_label">Gender</label>
+                    <div>
+                        <label class="radio-container" id="male_radio_label">
+                            Male
+                            <input type="radio" name="radio" id="male_radio_label_button" required />
+                            <span class="radio-checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="radio-container" id="female_radio_label">
+                            Female
+                            <input type="radio" name="radio" id="female_radio_label_button" required />
+                            <span class="radio-checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="radio-container" id="other_gender_radio_label">
+                            Prefer not to say
+                            <input type="radio" name="radio" id="other_gender_radio_label_button" required />
+                            <span class="radio-checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="slider" id="slider_range_for_age">
+                    <label id="slider_label_for_age">Age</label>
+                    <input type="range" id="age_range_slider" min="0" max="100" value="18"
+                        oninput="rangeValue.innerText = this.value" />
+                    <p id="rangeValue">18</p>
+                </div>
+
+                <div class="button" id="button_signup">
+                    <a href="#" onclick="return validateSignUpForm('Page1','Page2');">
+                        <input type="submit" value="Sign Up" id="user_signup_button" />
+                    </a>
+                </div>
+
+                <div class="button" id="navigation_to_login_page">
+                    <p class="form__text" id="label_for_login_button_on_sign_up_page">
+                        Already have an account?
+                    </p>
+                    <a href="#" onclick="return show('Page1','Page2');">
+                        <input type="submit" value="Login" id="login_button_on_sign_up_page" />
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="Page3" style="display: none">
+        <div class="container" id="review_container">
+            <form class="form" id="login" action="#">
+                <img src="review.jpg" alt="Review" class="" id="review_homeimage" />
+                <h1 class="form__title" id="review_page_title">
+                    WE APPRECIATE YOUR REVIEW!
+                </h1>
+                <h5 id="review_title_subtet">
+                    Your review will help me to improve in my future assignments.
+                </h5>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="review_username_label"> Username </label>
+                    </span>
+                    <input type="text" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Enter your Username" id="review_username_input" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <span style="margin-bottom: 5px">
+                        <label id="review_user_email"> Email </label>
+                    </span>
+                    <input type="text" class="form__input" style="margin-top: 0.3rem" autofocus
+                        placeholder="Enter your Email" id="review_user_email_input" required />
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <h4 id="rate_your_service">Please rate your service experience for the following parameters</h4>
+
+                <div>
+                    <label style="margin: 10px 0px 0px 0px" id="review_selection_tool_rating_label">1. Selection of the
+                        testing tool for this assignment?</label><br>
+
+                    <span class="star-rating" id="review_page_overall_experience_star_rating">
+                        <input type="radio" name="rating1" value="1"><i></i>
+                        <input type="radio" name="rating1" value="2"><i></i>
+                        <input type="radio" name="rating1" value="3"><i></i>
+                        <input type="radio" name="rating1" value="4"><i></i>
+                        <input type="radio" name="rating1" value="5"><i></i>
+                    </span>
+                </div>
+                <div class="clear"></div>
+                <hr class="survey-hr" id="review_horizonatal_line_one">
+
+                <div>
+                    <label style="margin: 10px 0px 0px 0px" id="review_assesment_2nd_question">2. Assessment of the
+                        submitted report in terms of set of grammar or formatting errors, information about the selected
+                        testing tool and the description of the Test Cases executed as part of this
+                        assignment?</label><br>
+
+                    <span class="star-rating" id="review_page_assesment_2nd_question_star_rating">
+                        <input type="radio" name="rating1" value="1"><i></i>
+                        <input type="radio" name="rating1" value="2"><i></i>
+                        <input type="radio" name="rating1" value="3"><i></i>
+                        <input type="radio" name="rating1" value="4"><i></i>
+                        <input type="radio" name="rating1" value="5"><i></i>
+                    </span>
+                </div>
+                <div class="clear"></div>
+                <hr class="survey-hr" id="review_horizonatal_line_two">
+
+                <div>
+                    <label id="review_implementation_3rd_question_label">3. How did you like the implementation of the
+                        application and the UI submitted as part of this assignment?</label><br><br />
+                    <div style="color:grey" id="3rd_question_review_scale_rating_labels">
+                        <span style="float:left" id="3rd_question_review_scale_rating_labels_for_poor">
+                            POOR
+                        </span>
+                        <span style="float:right" id="3rd_question_review_scale_rating_labels_for_best">
+                            BEST
+                        </span>
+
+                    </div>
+                    <span class="scale-rating" id="review_implementation_3rd_question_scale_rating">
+                        <label value="1">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="2">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="3">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="4">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="5">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="6">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="7">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="8">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="9">
+                            <input type="radio" name="rating">
+                            <label style="width:100%;"></label>
+                        </label>
+                        <label value="10">
+                            <input type="radio" name="rating" value="10">
+                            <label style="width:100%;"></label>
+                        </label>
+                    </span>
+
+                    <div class="clear"></div>
+                    <hr class="survey-hr" id="review_horizonatal_line_three">
+                </div>
+
+                <div id="custom_review_text_area_box">
+                    <label id="custom_review_text_area_box_labek">4. If there are any Other suggestions, please let me
+                        know in the text area below?</label><br><br />
+                    <textarea cols="50" rows="5" style="overflow:scroll; width: 100%;"
+                        id="custom_review_text_area_box_ui_html">
+
+                        </textarea>
+                    <div class="clear"></div>
+                    <hr class="survey-hr" id="review_horizonatal_line_four">
+                </div>
+
+                <div id="review_page_overall_experience">5. Your overall experience with my submitted assignment?</div>
+                <div class="slider" id="slider_range_for_overall_rating">
+                    <!-- <label id="slider_label_for_age">Age</label> -->
+                    <input type="range" id="review_overall_rating_slider" min="1" max="10" value="5"
+                        oninput="review_overall_rating_slider_rangeValue.innerText = this.value" />
+                    <p id="review_overall_rating_slider_rangeValue">5</p>
+                </div>
+
+                <div class="button" id="button_submit_review">
+                    <!-- <p class="form__text" id="label_for_submit_review_button_on_review_page">
+                        Note you will be logged out as soon as you submit the review.
+                    </p> -->
+                    <a href="#" onclick="return show('Page1','Page3');">
+                        <!-- validateForm('Page2','Page1', 'userNameorEmail_input', 'password_input'); -->
+                        <input type="submit" value="Submit Review" id="user_submit_review_button" />
+                    </a>
+                </div>
+
+                <div class="button" id="navigation_to_login_pagefrom_the_review_page">
+                    <p class="form__text" id="label_for_login_button_on_review_page">
+                        Not yet ready to review ? No problem, come back later to submit your review.
+                    </p>
+                    <a href="#" onclick="return show('Page1','Page3');">
+                        <input type="submit" value="Logout" id="logout_button_on_review_page" />
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="./src/main.js"></script> -->
+    <script src="https://use.fontawesome.com/a6f0361695.js"></script>
+    <script>
+        function show(shown, hidden) {
+            console.log("show - hidden", shown, "- ", hidden);
+            document.getElementById(shown).style.display = "block";
+            document.getElementById(hidden).style.display = "none";
+            return false;
+        }
+
+        function validateForm(shown, hidden, input1, input2) {
+            console.log("sdsadasdsa");
+            if (document.getElementById(input1).value.length > 0) {
+                if (document.getElementById(input2).value.length > 0) {
+                    if (document.getElementById("login_terms_and_conditions").checked) {
+                        console.log("sadasdasdasda");
+                        return show(shown, hidden);
+                    }
+                }
+            }
+            return false;
+        }
+
+        function validateSignUpForm(shown, hidden) {
+            console.log("sdsadasdsa");
+            if (document.getElementById("signupUsername").value.length > 0) {
+                if (document.getElementById("signupUsername_email").value.length > 0) {
+                    if (document.getElementById("signup_password").value.length > 0) {
+                        if (
+                            document.getElementById("signup_confirm_password").value.length >
+                            0
+                        ) {
+                            if (
+                                document.getElementById("signup_confirm_password").value ===
+                                document.getElementById("signup_password").value
+                            ) {
+                                if (
+                                    document.getElementById("signupUser_phonenumber").value
+                                        .length > 0
+                                ) {
+                                    if (
+                                        document.getElementById("male_radio_label_button")
+                                            .checked ||
+                                        document.getElementById("female_radio_label_button")
+                                            .checked ||
+                                        document.getElementById("other_gender_radio_label_button")
+                                            .checked
+                                    ) {
+                                        if (
+                                            document.getElementById("age_range_slider").value >= 18
+                                        ) {
+                                            console.log("sdsadasdsa-1");
+                                            return show(shown, hidden);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
